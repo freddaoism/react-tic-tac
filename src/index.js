@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-
+/* comment here */
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -12,6 +12,7 @@ function Square(props) {
   );
 }
 
+/* comment here */
 class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -44,6 +45,7 @@ class Board extends React.Component {
     );
   }
 }
+
 /* Game Class */
 class Game extends React.Component {
   constructor(props) {
@@ -59,6 +61,7 @@ class Game extends React.Component {
     };
   }
 
+  /* comment here */
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
@@ -78,13 +81,15 @@ class Game extends React.Component {
     });
   }
 
+  /* comment here */
   jumpTo(step) {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
     });
   }
-
+  
+  /* comment here */
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
